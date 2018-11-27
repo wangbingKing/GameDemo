@@ -16,10 +16,7 @@
 @property (strong, nonatomic) GLKBaseEffect *effect;
 @property (nonatomic, assign) BOOL origntationsLanscape;
 
-
-- (void)setupGL;
 - (void)tearDownGL;
-
 - (BOOL)prefersStatusBarHidden;
 - (void)changeScreenOrigntation:(UIInterfaceOrientation)orientation;
 @end
@@ -29,8 +26,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.origntationsLanscape = true;
         self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
-        
         if (!self.context)
         {
             NSLog(@"Failed to create ES context");
@@ -38,12 +35,12 @@
         GLKView *view = (GLKView *)self.view;
         view.context = self.context;
         view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
-        self.origntationsLanscape = true;
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [EAGLContext setCurrentContext:self.context];
     CApplication::getInstance()->run();
 }
 
@@ -60,7 +57,7 @@
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
-    CApplication::getInstance()->drawFunc(view.drawableWidth,view.drawableHeight);
+    CApplication::getInstance()->drawCell((int)view.drawableWidth,(int)view.drawableHeight);
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations

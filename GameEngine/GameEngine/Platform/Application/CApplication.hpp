@@ -15,10 +15,12 @@ class CApplication : public CObj
 {
 public:
     CApplication();
-    int run();
-    int stop();
+    void init(int width,int height);
+    virtual int run();
+    virtual int stop();
     virtual void tearDownGL();
-    virtual void drawFunc(long width,long heigth);
+    virtual void drawCell();
+    virtual void drawCell(int width,int height);
     virtual int update(float fp);
     static CApplication* getInstance();
     void applicationDidEnterBackground();
@@ -27,8 +29,9 @@ public:
 protected:
     virtual ~CApplication();
     static void Destory();
-private:
     static CApplication *m_cApplication;
+    int                 width;
+    int                 height;
 };
 
 #endif /* CApplication_hpp */

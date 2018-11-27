@@ -23,16 +23,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
-    
-//    CCEAGLView *eaglView = [CCEAGLView viewWithFrame: [window bounds]
-//                                         pixelFormat: (NSString*)cocos2d::GLViewImpl::_pixelFormat
-//                                         depthFormat: cocos2d::GLViewImpl::_depthFormat
-//                                  preserveBackbuffer: NO
-//                                          sharegroup: nil
-//                                       multiSampling: NO
-//                                     numberOfSamples: 0 ];
-//
-//    [eaglView setMultipleTouchEnabled:NO];
     viewController = [[ViewController alloc] init];
     // Set RootViewController to window
     if ( [[UIDevice currentDevice].systemVersion floatValue] < 6.0)

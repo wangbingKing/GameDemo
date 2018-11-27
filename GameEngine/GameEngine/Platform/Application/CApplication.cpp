@@ -19,6 +19,11 @@ CApplication::~CApplication()
 {
     
 }
+void CApplication::init(int w,int h)
+{
+    width = w;
+    height = h;
+}
 int CApplication::run()
 {
     char vShaderStr[] =
@@ -49,11 +54,8 @@ int CApplication::update(float fp)
 {
     return 1;
 }
-void CApplication::drawFunc(long width,long heigth)
+void CApplication::drawCell(int w,int h)
 {
-    CESContext::getInstance()->setWidth(width);
-    CESContext::getInstance()->setHeight(heigth);
-    
     GLuint programObj = CESContext::getInstance()->getProgramObject();
     
     GLfloat vVertices[] = {  0.0f,  0.5f, 0.0f,
@@ -62,7 +64,7 @@ void CApplication::drawFunc(long width,long heigth)
     };
     
     // Set the viewport
-    glViewport ( 0, 0, (int)width, (int)heigth );
+    glViewport ( 0, 0, w, h );
     
     // Clear the color buffer
     glClear ( GL_COLOR_BUFFER_BIT );
@@ -76,6 +78,10 @@ void CApplication::drawFunc(long width,long heigth)
     
     glDrawArrays ( GL_TRIANGLES, 0, 3 );
     
+}
+void CApplication::drawCell()
+{
+    drawCell(width,height);
 }
 void CApplication::tearDownGL()
 {
