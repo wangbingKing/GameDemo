@@ -47,6 +47,13 @@ typedef struct
 {
     GLfloat   m[4][4];
 } ESMatrix;
-   
+
+
+#define VERTEX_POS_SIZE         3   //x,y,z,
+#define VERTEX_COLOR_SIZE       4   //r g b a
+
+//顶点属性索引位置
+#define VERTEX_POS_INDX         0
+#define VERTEX_COLOR_INDX       1
 
 #endif /* CGLBase_hpp */

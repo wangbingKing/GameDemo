@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528D2E1E21AFF32E001BF1B7 /* CRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D2E1C21AFF32E001BF1B7 /* CRender.cpp */; };
+		528D2E1F21AFF32E001BF1B7 /* CRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D2E1C21AFF32E001BF1B7 /* CRender.cpp */; };
+		528D2E2021AFF32E001BF1B7 /* CRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 528D2E1C21AFF32E001BF1B7 /* CRender.cpp */; };
+		528D2E2121AFF32E001BF1B7 /* CRender.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 528D2E1D21AFF32E001BF1B7 /* CRender.hpp */; };
 		529B92DC219E618A0045E5C5 /* GameEngine.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 529B92DB219E618A0045E5C5 /* GameEngine.hpp */; };
 		529B92DE219E618A0045E5C5 /* GameEnginePriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 529B92DD219E618A0045E5C5 /* GameEnginePriv.hpp */; };
 		529B92E0219E618A0045E5C5 /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 529B92DF219E618A0045E5C5 /* GameEngine.cpp */; };
@@ -75,6 +79,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		528D2E1C21AFF32E001BF1B7 /* CRender.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CRender.cpp; sourceTree = "<group>"; };
+		528D2E1D21AFF32E001BF1B7 /* CRender.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CRender.hpp; sourceTree = "<group>"; };
 		529B92D8219E618A0045E5C5 /* libGameEngine_mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGameEngine_mac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		529B92DB219E618A0045E5C5 /* GameEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameEngine.hpp; sourceTree = "<group>"; };
 		529B92DD219E618A0045E5C5 /* GameEnginePriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameEnginePriv.hpp; sourceTree = "<group>"; };
@@ -368,6 +374,8 @@
 				52B11E3021A8FC2F00CC0AE1 /* CESContext.hpp */,
 				52B11E3E21A94F5F00CC0AE1 /* CESContext.cpp */,
 				52B11E3921A93D4C00CC0AE1 /* CGLShader.hpp */,
+				528D2E1C21AFF32E001BF1B7 /* CRender.cpp */,
+				528D2E1D21AFF32E001BF1B7 /* CRender.hpp */,
 			);
 			path = opengl;
 			sourceTree = "<group>";
@@ -397,6 +405,7 @@
 				52ACD2A821A65210006F57DC /* FileWrapper.h in Headers */,
 				52D5554E21A7D54F00E8A609 /* CMath.hpp in Headers */,
 				52B11E3D21A93D4C00CC0AE1 /* CGLShader.hpp in Headers */,
+				528D2E2121AFF32E001BF1B7 /* CRender.hpp in Headers */,
 				52F02EBF219EB7DE00D7C9AF /* CApplication.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +583,7 @@
 				52F02EC1219EB7DE00D7C9AF /* CApplication.cpp in Sources */,
 				529B92E0219E618A0045E5C5 /* GameEngine.cpp in Sources */,
 				52B11E4021A94F5F00CC0AE1 /* CESContext.cpp in Sources */,
+				528D2E1F21AFF32E001BF1B7 /* CRender.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +594,7 @@
 				52F02EC0219EB7DE00D7C9AF /* CApplication.cpp in Sources */,
 				529B92EE219E61FB0045E5C5 /* GameEngine_ios.m in Sources */,
 				52B11E3F21A94F5F00CC0AE1 /* CESContext.cpp in Sources */,
+				528D2E1E21AFF32E001BF1B7 /* CRender.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +604,7 @@
 			files = (
 				52F02EC3219EB85E00D7C9AF /* CApplication.cpp in Sources */,
 				529B9B43219EAD660045E5C5 /* main.m in Sources */,
+				528D2E2021AFF32E001BF1B7 /* CRender.cpp in Sources */,
 				52D5127B21A42D28000B3393 /* ViewController.mm in Sources */,
 				529B9B35219EAD650045E5C5 /* AppDelegate.mm in Sources */,
 				52ACD2A721A65210006F57DC /* FileWrapper.m in Sources */,
